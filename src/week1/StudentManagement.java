@@ -8,17 +8,66 @@ public class StudentManagement {
 
     public boolean sameGroup(Student s1, Student s2) {
         // TODO:
-        if(s1.getGroup()== s2.getGroup()) return true;
+        if(s1.getGroup() == s2.getGroup()) return true;
         else return false;
+    }
+
+    int countStudents(){
+      int i;
+      for(i=0 ;i<students.length ; i++)
+      {
+        if(students[i] == null) break;
+      }
+      return i;
     }
 
     void studentsByGroup() {
         // TODO:
-      }
+        int demSoLop=1;
+        String[] soLop = new String[100];
+        soLop[0] = students[0].getGroup();
+        for(int i=1; i<countStudents(); i++)
+        {
+          int j=0;
+          for(j=0; j<demSoLop; j++)
+          {
+            if(students[i].getGroup() != soLop[j]) continue;
+            else break;
+          }
+          if(j == demSoLop)
+          {
+            demSoLop++;
+            soLop[demSoLop - 1] = students[i].getGroup();
+          }
+        }
+        for(int i=0; i<demSoLop; i++)
+        {
+          System.out.println("Sinh vien lop " + soLop[i] + ":");
+          for(int j=0; j<countStudents(); j++)
+          {
+            if(students[j].getGroup() == soLop[i])
+            {
+              students[j].getInfo();
+            }
+          }
+        }
+
+    }
 
 
     void removeStudent(String id) {
         // TODO:
+        for(int i=0; i<countStudents(); i++)
+        {
+
+            if(id.equals(students[i].getGroup()))
+            {
+              for(int j=i; j<countStudents(); j++)
+              {
+                students[j] = students[j + 1];
+              }
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -31,15 +80,15 @@ public class StudentManagement {
         String ten;
         ten = me.getName();
         System.out.println(ten);
-        me.getInfo();
+        //me.getInfo();
         Student t1 = new Student();
-        t1.getInfo();
+        //t1.getInfo();
         Student t2 = new Student("kael", "123", "cucshit@gmail.com");
-        t2.getInfo();
+        //t2.getInfo();
         Student t3 = new Student(t2);
-        t3.getInfo();
+        //t3.getInfo();
         Student t4 = new Student();
-        t4.setGroup("INT22042");
+        t4.setGroup("INT22043");
         StudentManagement a = new StudentManagement();
         if(a.sameGroup(t4, t1) == true) System.out.println("YES");
         else System.out.println("NO");
@@ -47,8 +96,11 @@ public class StudentManagement {
         else System.out.println("NO");
         a.students[0] = t1;
         a.students[1] = t2;
-        a.students[2] = t3;
+        a.students[2] = t4;
         a.studentsByGroup();
+        //a.removeStudent("INT22042");
+
+
 
     }
 }
