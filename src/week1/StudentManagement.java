@@ -11,7 +11,6 @@ public class StudentManagement {
         if(s1.getGroup() == s2.getGroup()) return true;
         else return false;
     }
-
     int countStudents(){
       int i;
       for(i=0 ;i<students.length ; i++)
@@ -20,7 +19,6 @@ public class StudentManagement {
       }
       return i;
     }
-
     void studentsByGroup() {
         // TODO:
         int demSoLop=1;
@@ -53,8 +51,6 @@ public class StudentManagement {
         }
 
     }
-
-
     void removeStudent(String id) {
         // TODO:
         for(int i=0; i<countStudents(); i++)
@@ -69,7 +65,6 @@ public class StudentManagement {
             }
         }
     }
-
     public static void main(String[] args) {
         // TODO:
         Student me = new Student();
@@ -98,9 +93,6 @@ public class StudentManagement {
         a.students[1] = t2;
         a.students[2] = t4;
         a.studentsByGroup();
-        //a.removeStudent("INT22042");
-
-
-
+        a.removeStudent("INT22042");
     }
 }
