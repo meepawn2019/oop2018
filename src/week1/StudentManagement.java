@@ -85,11 +85,9 @@ public class StudentManagement {
         a.students[1] = t2;
         a.students[2] = t4;
         a.studentsByGroup();
-<<<<<<< HEAD
         a.removeStudent("123");
-        System.out.println(a.students[1]);
-=======
-        a.removeStudent("INT22042");
->>>>>>> d65016bd32d2a37ae6584d8687819a0abae39e49
+        System.out.println(a.countStudents());
+        a.removeStudent("INT22043");
+        System.out.println(a.countStudents());
     }
 }
