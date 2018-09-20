@@ -48,7 +48,7 @@ public class StudentManagement {
         // TODO:
         for(int i=0; i<countStudents(); i++)
         {
-            if(id.equals(students[i].getGroup())) //Nếu sinh viên trùng với id thì xóa
+            if(id.equals(students[i].getId())) //Nếu sinh viên trùng với id thì xóa
             {
               for(int j=i; j<countStudents(); j++)
               {
