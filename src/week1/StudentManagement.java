@@ -7,13 +7,13 @@ public class StudentManagement {
 
     public boolean sameGroup(Student s1, Student s2) {
         // TODO:
-        return s1.getGroup().equals(s2.getGroup());
+        return s1.getGroup().equals(s2.getGroup()); //Trả về true nếu đúng, false nếu sai
     }
-    int countStudents(){
+    int countStudents(){ //Đếm số sinh viên của lớp
       int i;
       for(i=0 ;i<students.length ; i++)
       {
-        if(students[i] == null) break;
+        if(students[i] == null) break; //Nếu mảng ko có giá trị thì thoát vòng lặp
       }
       return i;
     }
@@ -27,20 +27,20 @@ public class StudentManagement {
           int j;
           for(j=0; j<demSoLop; j++)
           {
-            if(students[i].getGroup().equals(soLop[j])) break;
+            if(students[i].getGroup().equals(soLop[j])) break; //Nếu lớp bị trùng thì break
           }
-          if(j == demSoLop)
+          if(j == demSoLop) //Nếu lớp chưa bị trùng thì tăng số lớp và gắn lớp vừa check vào mảng
           {
             demSoLop++;
             soLop[demSoLop - 1] = students[i].getGroup();
           }
         }
-        for(int i=0; i<demSoLop; i++)
+        for(int i=0; i<demSoLop; i++) 
         {
           System.out.println("Sinh vien lop " + soLop[i] + ":");
           for(int j=0; j<countStudents(); j++)
           {
-            if(students[j].getGroup().equals(soLop[i])) students[j].getInfo();
+            if(students[j].getGroup().equals(soLop[i])) students[j].getInfo(); //Sinh viên có số lớp trên thì in ra màn hình
           }
         }
     }
@@ -48,7 +48,7 @@ public class StudentManagement {
         // TODO:
         for(int i=0; i<countStudents(); i++)
         {
-            if(id.equals(students[i].getGroup()))
+            if(id.equals(students[i].getGroup())) //Nếu sinh viên trùng với id thì xóa
             {
               for(int j=i; j<countStudents(); j++)
               {
