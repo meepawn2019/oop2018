@@ -2,7 +2,7 @@ package week2.task1;
 
 public class Task1 {
 
-    public static int gcd(int a, int b) {
+    public static int gcd(int a, int b) { // Gan so lon hon bang hieu 2 so cho den khi bang nhau
         // TODO: Tính ước chung lớn nhất của 2 số a, b
         a=Math.abs(a);
         b=Math.abs(b);
@@ -13,7 +13,7 @@ public class Task1 {
         return a;
     }
 
-    public static int fibonacci(int n) {
+    public static int fibonacci(int n) { // F(n) = F(n-1) + F(n-2)
         // TODO: Tìm số fibonacci ở vị trí n
         int fn0=0;
         int fn1=1;
