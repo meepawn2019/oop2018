@@ -26,8 +26,12 @@ public class Fraction {
     public Fraction add(Fraction other) {
         // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
         Fraction plus = new Fraction(0, 0);
-        plus.denominator = this.denominator * other.denominator;
-        plus.numerator = this.numerator*other.denominator + other.numerator*this.denominator;
+        if(this.denominator != other.denominator){
+          plus.denominator = this.denominator * other.denominator;
+          plus.numerator = this.numerator*other.denominator + other.numerator*this.denominator;
+        }
+        else plus.numerator = this.numerator + other.numerator;
+        plus.denominator = this.denominator;
         plus.ToiGian();
         return plus;
     }
@@ -68,8 +72,8 @@ public class Fraction {
     }
 
     public static void main(String args[]){
-      Fraction a = new Fraction(1, 3);
-      Fraction b = new Fraction(1, 3);
+      Fraction a = new Fraction(-1, 4);
+      Fraction b = new Fraction(-1, 4);
       Fraction c = new Fraction(0, 1);
       c = a.add(b);
       System.out.println(c.numerator + " " + c.denominator);
