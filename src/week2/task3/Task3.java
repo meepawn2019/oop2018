@@ -1,7 +1,7 @@
 package week2.task3;
 
 public class Task3 {
-  public class Human{
+  public class Human{ //Lop con nguoi gom ten tuoi gioi tinh
     private String name;
     private int age;
     private String gender;
@@ -15,22 +15,22 @@ public class Task3 {
     public void setGender(String id){gender = id;}
     public String getGender(){return gender;}
 
-    public void areAdult(){
+    public void areAdult(){ //Kiem tra xem co phai nguoi lon khong
       if(this.age > 18) System.out.println("Toi la nguoi lon");
       else System.out.println("Toi chua du 18 tuoi");
     }
 
-    public void areABoy(){
+    public void areABoy(){ //Kiem tra xem co phai dan ong khong
       if(this.gender.equals("Male") || this.gender.equals("male")) System.out.println("Toi la con trai");
       else System.out.println("Toi khong phai con trai");
     }
 
-    public void hoiTen(){
+    public void hoiTen(){ //Hoi ten
       System.out.println("Ten toi la: " + this.name);
     }
   }
 
-  public class Bike{
+  public class Bike{ //Lop xe may gom ten toc do va tinh trang
     private String name;
     private int speed;
     private boolean status;
@@ -42,21 +42,21 @@ public class Task3 {
     public void setStatus(boolean a){this.status = a;}
     public boolean getStatus(){return status;}
 
-    public boolean isUseable(){
+    public boolean isUseable(){ //Tra ve trang thai
       return this.status;
     }
 
-    public void speedUp(int tocDo){
+    public void speedUp(int tocDo){ //Tang toc
       this.speed+=tocDo;
     }
 
-    public void slowDown(int tocDo){
+    public void slowDown(int tocDo){ //Giam toc
       this.speed-=tocDo;
     }
 
   }
 
-  public class Book{
+  public class Book{ //Lop sach gom ten, so trang va trang hien tai
     private String title;
     private int pages;
     private int currentPage = 0;
@@ -68,14 +68,14 @@ public class Task3 {
     public void setCurrentPage(int a){currentPage = a;}
     public int getCurrentPage(){return currentPage;}
 
-    public boolean isEnd(){
+    public boolean isEnd(){ //Kiem tra xem da het chua
       if(currentPage == pages) return true;
       else return false;
     }
-    public void nextPage(){
+    public void nextPage(){ //Sang trang tiep theo
       this.currentPage++;
     }
-    public void whatTitle(){
+    public void whatTitle(){ //Hoi ten sach
       System.out.println("The book title is: " + this.title);
     }
   }
