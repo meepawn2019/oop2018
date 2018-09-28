@@ -26,16 +26,20 @@ public class Task1 {
             fn1 = fn;
           }
         }
-        if(n == 0) System.out.println(fn0);
-        else if(n == 1) System.out.println(fn1);
-        else System.out.println(fn);
-        return 0;
+        switch (n) {
+            case 0:
+                return fn0;
+            case 1:
+                return fn1;
+            default:
+                return fn;
+        }
     }
 
     public static void main(String args[]){
       int a, b;
       a = gcd(9,6);
       System.out.println(a);
-      b = fibonacci(8);
+      System.out.println(fibonacci(8));
     }
 }
