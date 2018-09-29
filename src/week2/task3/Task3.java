@@ -1,5 +1,6 @@
 package week2.task3;
 
+
 public class Task3 {
   public class Human{ //Lop con nguoi gom ten tuoi gioi tinh
     private String name;
