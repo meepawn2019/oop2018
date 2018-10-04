@@ -25,7 +25,7 @@ public class Week3 {
     public static String calculateBMI(double weight, double height) {
         // TODO: Viết chương trình tính chỉ số BMI và in ra kết quả đánh giá
         double bmi = weight/(height*height);
-        if(bmi < 18.5) return new String("Binh thuong");
+        if(bmi < 18.5) return new String("Thieu can");
         else if(bmi>=18.5 && bmi <=24.99) return new String("Binh thuong");
         else if(bmi>=23 && bmi <=24.99) return new String("Thua can");
         else return new String("Beo phi");

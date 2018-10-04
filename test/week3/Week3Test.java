@@ -32,5 +32,9 @@ public class Week3Test {
     // TODO: Viết 5 testcase cho phương thức calculateBMI()
     public void testCalculateBMI(){
       assertEquals("Binh thuong",Week3.calculateBMI(50.5, 1.6));
+      assertEquals("Beo phi",Week3.calculateBMI(90,1.8));
+      assertEquals("Thieu can",Week3.calculateBMI(40, 1.59));
+      assertEquals("Binh thuong",Week3.calculateBMI(57,1.62));
+      assertEquals("Binh thuong",Week3.calculateBMI(50.5, 1.6));
     }
 }
