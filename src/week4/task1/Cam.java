@@ -4,23 +4,24 @@ import java.io.*;
 
 public class Cam extends HoaQua{
   private String type;
-  private float giaBan;
+  private int giaBan;
 
-  public String getName(){return "Cam";}
+  public String getName(){super.getName()}
   final public void setName(String id){super.setName("Cam");}
 
   public String getType(){return type;}
   public void setType(String id){type = id;}
 
-  public Cam(String id, float a){
+  public Cam(String id, double a, int b){
     super("Cam", a);
+    this.giaBan = b;
     this.type = id;
   }
-  public float getGiaBan() {
+  public int getGiaBan() {
     return giaBan;
   }
 
-public void setGiaBan(float giaBan) {
+public void setGiaBan(int giaBan) {
     this.giaBan = giaBan;
   }
 

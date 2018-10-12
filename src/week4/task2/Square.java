@@ -46,6 +46,7 @@ public class Square extends Rectangle{
       a.setLength(5.0);
       a.setWidth(5.0);
       a.setFilled(true);
+      System.out.println("DT: " + a.getArea() + "\tChu vi: " + a.getPerimeter());
       System.out.println(a.getLength() + "\n" + a.getWidth());
       System.out.println(a.toString() + "\n" + b.toString() + "\n" + c.toString());
     }
