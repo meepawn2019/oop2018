@@ -1,5 +1,4 @@
-package src;
-
+package week5_6;
 
 import javax.swing.*;
 import java.awt.*;

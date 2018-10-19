@@ -1,4 +1,4 @@
-package src;
+package week5_6;
 
 import java.awt.*;
 import java.awt.Point;

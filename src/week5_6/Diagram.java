@@ -1,5 +1,4 @@
-package src;
-
+package week5_6;
 
 import jdk.jshell.Diag;
 
