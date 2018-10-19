@@ -20,6 +20,8 @@ public class Layer extends JPanel implements  ActionListener{
             listShape.add(new Circle(Color.BLUE, true,100, 200, 10));
             listShape.add(new Circle(Color.red, true, 500, 500, 20));
             listShape.add(new Triangle(Color.BLACK, true, new Point(10, 20), new Point(60, 40), new Point(120, 40)));
+			//listShape.add(new Rectangle(Color.CYAN, true, 200, 500, new Point(70, 120)));
+			listShape.add(new Square(Color.BLACK, true, 300, new Point(200, 200)));
             Timer timer = new Timer(15, this);
             timer.start();
         }
@@ -66,6 +68,15 @@ public class Layer extends JPanel implements  ActionListener{
         }
         listShape.removeAll(toRemove);
     }
-
+	
+	public void deleteTriangle(){
+		List<Shape> toRemove = new ArrayList<>();
+        for(Shape a: listShape){
+            if(a instanceof  Triangle){
+                toRemove.add(a);
+            }
+        }
+        listShape.removeAll(toRemove);
+	}
 
 }
