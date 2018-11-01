@@ -1,10 +1,10 @@
 package week7.task1;
 
-public class Addition extends BinaryExpression {
+public class Multiplication extends BinaryExpression{
 	private Expression left;
 	private Expression right;
 
-	public Addition(Expression left, Expression right){
+	public Multiplication(Expression left, Expression right){
 		this.left = left;
 		this.right = right;
 	}
@@ -13,10 +13,10 @@ public class Addition extends BinaryExpression {
 	public Expression right(){return this.right;}
 
 	public int evaluate(){
-		return this.left.evaluate() + this.right.evaluate();
+		return this.left.evaluate() * this.right.evaluate();
 	}
 
 	public String toString(){
-		return this.left.toString() + " + " + this.right.toString();
+		return this.left.toString() + " * " + this.right.toString();
 	}
 }
